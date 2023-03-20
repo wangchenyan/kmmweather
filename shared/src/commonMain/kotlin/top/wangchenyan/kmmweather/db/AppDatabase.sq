@@ -1,0 +1,29 @@
+CREATE TABLE NowWeather (
+    id   INTEGER NOT NULL PRIMARY KEY,
+    json TEXT
+);
+
+insertNowWeather:
+INSERT OR REPLACE INTO NowWeather(id, json) VALUES(1, ?);
+
+selectNowWeather:
+SELECT * FROM NowWeather
+WHERE id = 1;
+
+removeAllNowWeather:
+DELETE FROM NowWeather;
+
+CREATE TABLE ForecastWeather (
+    id   INTEGER NOT NULL PRIMARY KEY,
+    json TEXT
+);
+
+insertForecastWeather:
+INSERT OR REPLACE INTO ForecastWeather(id, json) VALUES(1, ?);
+
+selectForecastWeather:
+SELECT * FROM ForecastWeather
+WHERE id = 1;
+
+removeAllForecastWeather:
+DELETE FROM ForecastWeather;
